@@ -40,8 +40,8 @@ sudo pacman -Sy compton
 cp compton.conf ~/.config/compton.conf
 
 #Install Spotify
-sudo dnf install snapd
-sudo snap install spotify
+sudo pacman -Sy flatpak
+sudo flatpak install spotify
 
 #Install feh
 sudo dnf install feh
@@ -54,6 +54,7 @@ sudo pacman -Sy dunst
 #Install Scrot
 sudo dnf install scrot
 sudo pacman -Sy scrot
+mkdir ~/Pictures/Screenshots 
 
 #Install Google Chrome
 sudo dnf install google-chrome
@@ -83,3 +84,12 @@ cp -r config ~/.config/i3/config
 
 #Copy Xresources config
 cp Xresources ~/.Xresources
+
+#Install ifconfig
+sudo pacman -Sy net-tools
+
+#Atom installation
+sudo pacman -Sy atom
+
+# Support double screen
+sudo pacman -Sy arandr

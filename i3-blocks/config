@@ -59,3 +59,8 @@ command=bash ./scripts/capsLock.sh
 interval=1
 separator=true
 
+[keyboard]
+label=
+command=bash ./scripts/layout.sh
+interval=1
+separator=true

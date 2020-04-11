@@ -37,11 +37,11 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+#font pango:monospace 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -234,3 +234,7 @@ bindsym Print exec scrot ~/Pictures/Screenshots/%b-%d-%H-%M-%S.png
 #Chnage notification server
 exec killall -q notify-send
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
+
+#Change Keyboard Language
+bindsym F4 exec setxkbmap us
+bindsym $mod+F4 exec setxkbmap pt
