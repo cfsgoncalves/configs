@@ -1,6 +1,6 @@
-[mpd]
+[spotify]
 label=
-command=bash ./scripts/audio.sh
+command=python3 ./scripts/spotify.py
 color=#00cc00
 interval=1
 separator=true
@@ -53,14 +53,20 @@ label=
 command=echo "" $(date +'%d/%m/%Y (%a)')
 interval=5
 
-[caps-lock]
+[luminosity]
 label=
-command=bash ./scripts/capsLock.sh
+command=bash ./scripts/backlight.sh
 interval=1
 separator=true
 
 [keyboard]
 label=
 command=bash ./scripts/layout.sh
+interval=1
+separator=true
+
+[caps-lock]
+label=
+command=bash ./scripts/capsLock.sh
 interval=1
 separator=true

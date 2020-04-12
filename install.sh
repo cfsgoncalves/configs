@@ -9,6 +9,8 @@ chsh -s $(/usr/bin/zsh)
 
 #Install oh-my-zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#Moving oh-my-zsh config
+cp .zshrc ~/.zshrc
 
 #Install vim
 sudo pacman -Sy vim
@@ -42,10 +44,12 @@ cp compton.conf ~/.config/compton.conf
 #Install Spotify
 sudo pacman -Sy flatpak
 sudo flatpak install spotify
+sudo pacman -Sy playerctl
 
 #Install feh
-sudo dnf install feh
+#sudo dnf install feh
 sudo pacman -Sy feh
+cp wallpaper2.jpg ~/Pictures
 
 #Install dunst - notification manager
 sudo dnf install dunst
@@ -93,3 +97,6 @@ sudo pacman -Sy atom
 
 # Support double screen
 sudo pacman -Sy arandr
+
+#BackLight control
+sudo pacman -Su xorg-backlight

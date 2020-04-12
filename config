@@ -195,15 +195,16 @@ bindsym F12 exec "amixer -q sset Master 5%+"
 bindsym F11 exec "amixer -q sset Master 5%-"
 bindsym F10 exec "amixer -q set Master toggle"
 
-## Backlight commands
-bindsym $mod+F5 exec brightlight -d 100
-bindsym $mod+F6 exec brightlight -i 100
-
-
 #MPD control - nmpdcpp
-bindsym $mod+Shift+s exec mpc toggle 
-bindsym $mod+Shift+n exec mpc next
-bindsym $mod+Shift+p exec mpc prev
+#bindsym $mod+Shift+s exec mpc toggle 
+#bindsym $mod+Shift+n exec mpc next
+#bindsym $mod+Shift+p exec mpc prev
+
+#Spotify control
+bindsym $mod+Shift+p exec --no-startup-id playerctl --player=spotify previous
+bindsym $mod+Shift+s exec --no-startup-id playerctl --player=spotify play-pause
+bindsym $mod+Shift+n exec --no-startup-id playerctl --player=spotify next
+
 
 #Startup exec UI
 exec --no-startup-id feh --bg-scale Pictures/wallpaper2.jpg
@@ -211,8 +212,8 @@ exec compton --config ~/.config/compton.conf -b
 
 #Startup exec programs
 exec --no-startup-id mpd
-exec --no-startup-id mpc
-exec --no-startup-id ncmpcpp
+#exec --no-startup-id mpc
+#exec --no-startup-id ncmpcpp
 exec --no-startup-id google-chrome
 #exec --no-startup-id hexchat
 
@@ -238,3 +239,9 @@ exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 #Change Keyboard Language
 bindsym F4 exec setxkbmap us
 bindsym $mod+F4 exec setxkbmap pt
+
+#Increase Decrease backlight
+bindsym $mod+F5 exec xbacklight -inc -10
+bindsym $mod+F6 exec xbacklight -inc +10
+bindsym $mod+F7 exec xbacklight -inc -100
+
